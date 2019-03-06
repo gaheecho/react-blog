@@ -1,0 +1,12 @@
+@import "../../../../src/styles/utils.scss";
+
+#PostCardList {
+    .post-card-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @include media("<medium") {
+            flex-direction: column;
+        }
+    }
+}

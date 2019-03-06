@@ -1,0 +1,11 @@
+@import "../../../styles/utils.scss";
+
+.MainTemplate {
+    margin-left: 18rem;
+    @include media("<xx-large") {
+        margin-left: 15rem;
+    }
+    @include media("<large") {
+    margin-left: 0;
+    }
+}

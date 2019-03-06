@@ -1,0 +1,19 @@
+@import '../lib/variables';
+
+html,
+body {
+    height: 100%;
+    margin:0;
+    overflow: auto;
+    background: $main-1;
+    color: #2b2024;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  *:before,
+  *:after {
+      box-sizing: inherit;
+  }

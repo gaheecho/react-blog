@@ -1,0 +1,56 @@
+@import "../../../styles/utils.scss";
+
+.MainSidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    width: 18rem;
+    @include media("<xx-large") {
+        width: 15rem;
+    }
+    @include media("<large") {
+        transform: translate(-100%);
+    }
+    top:0;
+    left:0;
+    height: 100%;
+    .logo {
+        font-family: 'Sanchez', serif;
+        font-size: 2rem;
+        padding: 3rem 2rem;
+    }
+    .menu {
+        // background: #ffffff;
+        list-style: none;
+        padding-left: 0;
+        a {
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 1.5rem;
+            display: flex;
+            align-items: center;
+            .title {
+                margin-left: 1rem;
+                font-weight: 500;
+            }
+            svg {
+                font-size: 1.5rem;
+            }
+            &:hover {
+                background: $main-1;
+            }
+        }
+        li {
+            &.active {
+                color: $main-2;
+                border-width: 0 2px 0 0;
+                border-style: solid;
+                .title {
+                    font-weight: 600;
+                }
+            }
+        }
+        
+    }
+}

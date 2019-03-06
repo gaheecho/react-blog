@@ -1,0 +1,24 @@
+$w-small:376px;
+$w-midium: 768px;
+$w-large: 1024px;
+$w-x-large: 1200px;
+$w-xx-large: 1400px;
+
+$breakpoints: (
+  small: $w-small,
+  medium: $w-midium,
+  large: $w-large,
+  x-large: $w-x-large,
+  xx-large: $w-xx-large
+);
+
+$main-1: #fbf9fa;
+$main-2: #fd0054;
+$main-3: #a80038;
+$main-4: #2b2024;
+$main-5: #948c8f;
+
+$main-color-1: #fafafa;
+$main-color-2: #e3e3e3;
+$main-color-3: #ee6f57;
+$main-color-4: #fafafa;
