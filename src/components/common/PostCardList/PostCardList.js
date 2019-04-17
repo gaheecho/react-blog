@@ -11,7 +11,6 @@ const PostCardList = (props: Props) => {
     
     return (
     <div id="PostCardList">
-        <button onClick={() => {props.addPost({postId:1, title:'test', imgSrc:'', isLiked:false, isBookmark:false}); console.log(props)}}></button>
         <div className="post-card-list">
         {
             props.postList.map((postItem, index) => {

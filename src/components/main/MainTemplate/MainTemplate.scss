@@ -4,8 +4,10 @@
     margin-left: 18rem;
     @include media("<xx-large") {
         margin-left: 15rem;
+        margin-top:0;
     }
     @include media("<large") {
     margin-left: 0;
+    margin-top: 6.5rem;
     }
 }
