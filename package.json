@@ -2,6 +2,7 @@
   "name": "react-blog",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gaheecho.github.io/react-blog",
   "dependencies": {
     "axios": "^0.18.0",
     "include-media": "^1.4.9",
@@ -18,6 +19,8 @@
     "redux-actions": "^2.6.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
++   "deploy": "react-blog -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
