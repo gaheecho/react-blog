@@ -8,8 +8,7 @@ type Props = {
 class Home extends Component<Props> {
     render() {
         return (
-            // <Main/>
-            <div>Main</div>
+            <Main/>
         )
     }
 }

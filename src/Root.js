@@ -6,7 +6,7 @@ import App from './components/App';
 import store from './store';
 
 const Root = () => (
-    <Provider store={store}>
+    <Provider store={store} basename={process.env.PUBLIC_URL}>
         <BrowserRouter>
             <App/>
         </BrowserRouter>
