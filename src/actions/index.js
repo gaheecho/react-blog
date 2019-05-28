@@ -49,19 +49,6 @@ export function setFilter(filter) {
     return { type: SET_FILTER, filter }
 }
 
-export function getFilteredList(postList, filter) {
-    return { type: GET_FILTERED_LIST, postList: filterPostList(postList, filter) }
-}
-
-
-function filterPostList(postList, filter) {
-  if(filter === 'SHOW_ALL' ) {
-    return  postList;
-  } else if(filter === 'SHOW_POPULAR') {
-    return  postList;
-  } else if( filter === 'SHOW_BOOKMARKED') {
-    return postList.filter(post => post.isBookmark===true);
-  } else {
-    return postList;
-  }
+export function getFilteredList(filter) {
+    return { type: GET_FILTERED_LIST, filter: filter }
 }

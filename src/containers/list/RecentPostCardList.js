@@ -25,10 +25,11 @@ const mapDispatchToProps = dispatch => {
 class RecentPostCardList extends Component {
     
     componentDidMount() {
-        this.props.getPostList();
-        this.props.setFilter('SHOW_All')
-        this.props.getFilteredList(this.props.postList, this.props.filter);
-        // this.props.getPostList();
+        if(this.props.postList.length === 0) {
+            this.props.getPostList();
+        }
+        this.props.setAllFilter();
+        this.props.getAllList();
     }
     render() {
         return (

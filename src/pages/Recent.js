@@ -25,11 +25,11 @@ const mapDispatchToProps = dispatch => {
         getPostList: () => {
             dispatch(getPostList())
         },
-        setFilter: (filter) => {
-            dispatch(setFilter(filter))
+        setAllFilter: () => {
+            dispatch(setFilter('SHOW_All'))
         },
-        getFilteredList: (postList, filter) => {
-            dispatch(getFilteredList(postList, filter))
+        getAllList: (filter) => {
+            dispatch(getFilteredList('SHOW_All'))
         }
     }
 }

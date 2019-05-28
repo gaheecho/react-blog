@@ -19,8 +19,8 @@ const mapDispatchToProps = dispatch => {
     setBookmarkFilter: () => {
         dispatch(setFilter('SHOW_BOOKMARKED'))
       },
-      getBookmarkList: (postList) => {
-          dispatch(getFilteredList(postList, 'SHOW_BOOKMARKED'))
+      getBookmarkList: () => {
+          dispatch(getFilteredList('SHOW_BOOKMARKED'))
       }
   }
 }
