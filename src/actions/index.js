@@ -9,6 +9,7 @@ export const TOGGLE_LIKE = 'TOGGLE_LIKE';
 export const TOGGLE_BOOKMARK = 'TOGGLE_BOOKMARK';
 export const SET_FILTER = 'SET_FILTER';
 export const GET_FILTERED_LIST = 'GET_FILTERED_LIST';
+export const SET_POST_LIST_ASYNC = 'SET_POST_LIST_ASYNC';
 
 export const filters = {
     SHOW_ALL: 'SHOW_ALL',
@@ -25,7 +26,7 @@ export function setPostList(postList) {
 }
 
 export function getPostList() {
-    return { type: GET_POST_LIST, isFetching: true }
+    return { type: SET_POST_LIST_ASYNC, isFetching: true }
 }
 
 export function receivePostList(res) {
@@ -59,7 +60,7 @@ function filterPostList(postList, filter) {
   } else if(filter === 'SHOW_POPULAR') {
     return  postList;
   } else if( filter === 'SHOW_BOOKMARKED') {
-    return postList.filter(post => post.isBookmark);
+    return postList.filter(post => post.isBookmark===true);
   } else {
     return postList;
   }

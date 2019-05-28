@@ -11,7 +11,6 @@ type Props = {
 }
 
 let LikeButton = (props: Props) => {
-    console.log(props)
     if(props.isLiked) {
         return (<span className="clicked" onClick={()=>{props.dispatch(toggleLike(props.postId))}}><TiHeartFullOutline/></span>)
     } else {

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { connect } from 'react-redux';
-import { addPost, setPostList, getPostList } from '../actions';
+import { addPost, setPostList, setFilter, getPostList, getFilteredList } from '../actions';
 import RecentTemplate from '../components/recent/RecentTemplate/RecentTemplate';
 import RecentPostCardList from '../containers/list/RecentPostCardList';
 // type Props = {};
@@ -9,7 +9,8 @@ import RecentPostCardList from '../containers/list/RecentPostCardList';
 const mapStateToProps = state => {
     console.log('mapStateToProps',state);
     return {
-      postList: state.postList
+      postList: state.postList,
+      filter: state.filter
     }
   }
   
@@ -23,6 +24,12 @@ const mapDispatchToProps = dispatch => {
         },
         getPostList: () => {
             dispatch(getPostList())
+        },
+        setFilter: (filter) => {
+            dispatch(setFilter(filter))
+        },
+        getFilteredList: (postList, filter) => {
+            dispatch(getFilteredList(postList, filter))
         }
     }
 }

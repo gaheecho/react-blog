@@ -16,11 +16,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-      setFilter: (filter) => {
-        dispatch(setFilter(filter))
+    setBookmarkFilter: () => {
+        dispatch(setFilter('SHOW_BOOKMARKED'))
       },
-      getFilteredList: (postList, filter) => {
-          dispatch(getFilteredList(postList, filter))
+      getBookmarkList: (postList) => {
+          dispatch(getFilteredList(postList, 'SHOW_BOOKMARKED'))
       }
   }
 }

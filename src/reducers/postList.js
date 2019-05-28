@@ -18,7 +18,9 @@ const postList = (state=[], action) => {
         case SET_POST_LIST:
             return [...action.postList]
         case GET_POST_LIST:
-            return postsApi.readPosts(); // @TODO: 비동기 통신하도록 수정해야함
+            postsApi.readPosts();
+            console.log('********************** :: GET_POST_LIST', state, action)
+            return action.postList ? [...action.postList] : [...state]; // @TODO: 비동기 통신하도록 수정해야함
         case GET_FILTERED_LIST:
             return [...action.postList]
         case RECEIVE_POST_LIST:

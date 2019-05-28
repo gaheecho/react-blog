@@ -7,9 +7,10 @@ import { addPost } from '../../actions';
 
 // }
 const mapStateToProps = state => {
-    console.log('mapStateToProps',state);
+    console.log('recent post card list mapStateToProps',state);
     return {
-      postList: state.postList
+      postList: state.postList,
+      filter: state.filter
     }
   }
   
@@ -25,6 +26,9 @@ class RecentPostCardList extends Component {
     
     componentDidMount() {
         this.props.getPostList();
+        this.props.setFilter('SHOW_All')
+        this.props.getFilteredList(this.props.postList, this.props.filter);
+        // this.props.getPostList();
     }
     render() {
         return (

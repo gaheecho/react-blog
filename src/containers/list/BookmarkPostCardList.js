@@ -7,7 +7,7 @@ import { addPost } from '../../actions';
 
 // }
 const mapStateToProps = state => {
-    console.log('mapStateToProps',state);
+    console.log('bookmark post card list mapStateToProps',state);
     return {
       postList: state.postList,
       filter: state.filter
@@ -25,8 +25,9 @@ const mapDispatchToProps = dispatch => {
 class BookmarkPostCardList extends Component {
     
     componentDidMount() {
-        this.props.setFilter('SHOW_BOOKMARKED')
-        this.props.getFilteredList(this.props.postList, this.props.filter);
+        this.props.setBookmarkFilter()
+        this.props.getBookmarkList(this.props.postList);
+        console.log(this.props)
     }
     render() {
         return (
